@@ -1,0 +1,21 @@
+# instalar apache
+sudo yum install -y httpd && echo "Apache instalado!" > logs.txt
+
+# instalar git
+sudo yum install -y git-all && echo "Git instalado!" >> logs.txt
+
+# clonar repositorio
+git clone https://github.com/gabs-ch/testesaws && echo "Repositório clonado!" >> logs.txt
+
+# mover repositório para pasta do apache
+sudo mv testesaws/* /var/www/html/ && echo "Arquivos movidos para pasta do Apache." >> logs.txt
+
+# ativar serviço do apache
+sudo systemctl enable httpd && echo "Serviço do Apache ativado!" >> logs.txt
+
+# restart no serviço do apache após mover
+sudo systemctl restart httpd && echo "Serviço do Apache iniciado novamente!" >> logs.txt
+
+# post para o site do professor 
+curl -X POST -d "nome=Gabriel Schmidt (Sim, eu novamente!)" https://difusaotech.com.br/lab/aws/index.php && echo "Gravado no site do professor!" >> logs.txt
+
