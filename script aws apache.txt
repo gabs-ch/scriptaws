@@ -17,5 +17,7 @@ sudo systemctl enable httpd && echo "Serviço do Apache ativado!" >> logs.txt
 sudo systemctl restart httpd && echo "Serviço do Apache iniciado novamente!" >> logs.txt
 
 # post para o site do professor 
-curl -X POST -d "nome=Gabriel Schmidt (Sim, eu novamente!)" https://difusaotech.com.br/lab/aws/index.php && echo "Gravado no site do professor!" >> logs.txt
+curl -X POST -d 'nome=Gabriel Schmidt (Sim, eu novamente!)' "https://difusaotech.com.br/lab/aws/index.php" && echo "Gravado no site do professor!" >> logs.txt
+
+# modificação realizada devido ao erro no POST
 
